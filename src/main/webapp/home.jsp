@@ -121,19 +121,6 @@
 					<td>YES</td>
 					<td></td>
 				</tr>
-				<tr>
-					<th>city</th>
-					<th>varchar(20)</th>
-					<td>YES</td>
-					<td></td>
-				</tr>
-				<tr>
-					<th>state</th>
-					<th>varchar(20)</th>
-					<td>YES</td>
-					<td></td>
-				</tr>
-
 
 			</tbody>
 		</table>
@@ -373,46 +360,38 @@
 					<td></td>
 				</tr>
 				<tr>
-					<th>seat_class1</th>
+					<th>train type</th>
+					<th>varchar(30)</th>
+					<td>YES</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>availability</th>
 					<th>int(11)</th>
 					<td>YES</td>
 					<td></td>
 				</tr>
 				<tr>
-					<th>seat_class2</th>
-					<th>int(11)</th>
+					<th>days</th>
+					<th>varchar(15)</th>
 					<td>YES</td>
 					<td></td>
 				</tr>
 				<tr>
-					<th>seat_class3</th>
-					<th>int(11)</th>
+					<th>dest_arriv_time</th>
+					<th>time</th>
 					<td>YES</td>
 					<td></td>
 				</tr>
 				<tr>
-					<th>fair_class1</th>
-					<th>int(11)</th>
+					<th>scr_depart_time</th>
+					<th>time</th>
 					<td>YES</td>
 					<td></td>
 				</tr>
 				<tr>
-					<th>fair_class2</th>
-					<th>int(11)</th>
-					<td>YES</td>
-					<td></td>
-				</tr>
-
-				<tr>
-					<th>fair_class3</th>
-					<th>int(11)</th>
-					<td>YES</td>
-					<td></td>
-				</tr>
-
-				<tr>
-					<th>available days</th>
-					<th>int(11)</th>
+					<th>total_time</th>
+					<th>time</th>
 					<td>YES</td>
 					<td></td>
 				</tr>
@@ -436,7 +415,7 @@
 		<table class="table">
 			<thead class="thead-dark">
 				<tr>
-					<h3>train status</h3>
+					<h3>train availanility</h3>
 					<th scope="col">Field</th>
 					<th scope="col">Type</th>
 					<th scope="col">Null</th>
@@ -445,35 +424,48 @@
 			</thead>
 			<tbody>
 				<tr>
-					<th>train id</th>
+					<th>id</th>
 					<th>int(11)</th>
 					<td>NO</td>
 					<td>PRIMARY</td>
 				</tr>
 				<tr>
-					<th>train name</th>
-					<th>varchar(30)</th>
-					<td>YES</td>
-					<td></td>
-				</tr>
-				<tr>
-					<th>book_seat_class1</th>
+					<th>train id</th>
 					<th>int(11)</th>
 					<td>YES</td>
 					<td></td>
 				</tr>
 				<tr>
-					<th>book_seat_class2</th>
+					<th>seat_class_1</th>
 					<th>int(11)</th>
 					<td>YES</td>
 					<td></td>
 				</tr>
 				<tr>
-					<th>book_seat_class3</th>
+					<th>seat_class_2</th>
 					<th>int(11)</th>
 					<td>YES</td>
 					<td></td>
 				</tr>
+				<tr>
+					<th>seat_class_3</th>
+					<th>int(11)</th>
+					<td>YES</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>seat_sleeper</th>
+					<th>int(11)</th>
+					<td>YES</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>seat_general</th>
+					<th>int(11)</th>
+					<td>YES</td>
+					<td></td>
+				</tr>
+
 				<tr>
 					<th>wait_seat_class1</th>
 					<th>int(11)</th>
@@ -486,20 +478,23 @@
 					<td>YES</td>
 					<td></td>
 				</tr>
-
 				<tr>
 					<th>wait_seat_class3</th>
 					<th>int(11)</th>
 					<td>YES</td>
 					<td></td>
 				</tr>
-
+				<tr>
+					<th>wait_seat_sleeper</th>
+					<th>int(11)</th>
+					<td>YES</td>
+					<td></td>
+				</tr>
 				<tr>
 					<th>avail_seat_class1</th>
 					<th>int(11)</th>
 					<td>YES</td>
 					<td></td>
-
 				</tr>
 				<tr>
 					<th>avail_seat_class2</th>
@@ -507,8 +502,47 @@
 					<td>YES</td>
 					<td></td>
 				</tr>
+
 				<tr>
 					<th>avail_seat_class3</th>
+					<th>int(11)</th>
+					<td>YES</td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<th>avail_seat_sleeper</th>
+					<th>int(11)</th>
+					<td>YES</td>
+					<td></td>
+
+				</tr>
+				<tr>
+					<th>fare_class1</th>
+					<th>int(11)</th>
+					<td>YES</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>fare_class2</th>
+					<th>int(11)</th>
+					<td>YES</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>fare_class3</th>
+					<th>int(11)</th>
+					<td>YES</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>fare_sleeper</th>
+					<th>int(11)</th>
+					<td>YES</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>fare_general</th>
 					<th>int(11)</th>
 					<td>YES</td>
 					<td></td>
@@ -519,31 +553,6 @@
 					<td>YES</td>
 					<td></td>
 				</tr>
-				<tr>
-					<th>Scr id</th>
-					<th>int(11)</th>
-					<td>Yes</td>
-					<td>MUL</td>
-				</tr>
-				<tr>
-					<th>Dest id</th>
-					<th>int(11)</th>
-					<td>YES</td>
-					<td>MUL</td>
-				</tr>
-				<tr>
-					<th>scr_depart_time</th>
-					<th>time</th>
-					<td>YES</td>
-					<td></td>
-				</tr>
-				<tr>
-					<th>dest_arriv_time</th>
-					<th>time</th>
-					<td>YES</td>
-					<td></td>
-				</tr>
-
 			</tbody>
 		</table>
 
